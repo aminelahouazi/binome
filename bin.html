@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>juste une question</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #bdb358f1;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #333;
+        }
+        .card {
+            background: rgb(255, 244, 180);
+            padding: 20px;
+            margin-left: 20dvw;
+            margin-right: 20dvw;
+            border-radius: 10px;
+            box-shadow: 10px 20px 5px rgba(0, 0, 0, 0.5);
+            border: black 1px solid;
+            text-align: center;
+        }
+        #card1{
+            display:none;
+            z-index: 5;
+        }
+        #card2{
+    
+     z-index: 0;
+        }
+        button {
+            background-color: #c7bd61f1;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            color: rgb(3, 3, 3);
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border: black 1px solid;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        button:hover {
+            background-color: #867f3ff1;
+            color:white;
+            
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id="card2">
+        <h1>Amk t'as un binome?</h1>
+        <button onclick="respondYes()">Oui</button>
+        <button onclick="respondN()">Non</button>
+        <div id="message" class="message"></div>
+    </div>
+
+    <div class="card" id="card1">
+        <h1>tu veux le faire ensemble?</h1>
+        <button onclick="respondYes2()">Oui</button>
+        <button onclick="respondNo()">Non</button>
+        <div id="message1" class="message"></div>
+    </div>
+
+    <script>
+        function respondYes() {
+            document.getElementById('message').innerText = "d'accord tant mieux";
+        }
+        function respondYes2() {
+            document.getElementById('message1').innerText = "yayyy bien choisi \n(khemasd capture d'ecran =D)";
+        }
+        function respondN() {
+            document.getElementById('card1').style.display = "inline";
+            document.getElementById('card2').style.display = "none";
+        }
+        function respondNo() {
+            document.getElementById('message1').innerText = "d'accord pas de probleme";
+        }
+    </script>
+</body>
+</html>
